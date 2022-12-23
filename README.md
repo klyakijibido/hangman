@@ -1,8 +1,10 @@
-# Hangman
-Hangman(виселица) - программа-викторина угадай слово.
+# Welcome to Hangman
+## What's Hangman?
+Hangman, в переводе - виселица, это программа-викторина по типу "угадай слово".
 
 Программа написана на языке Ruby.
 
+## Getting Started
 
 ruby main.rb
 
