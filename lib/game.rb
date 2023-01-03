@@ -35,16 +35,6 @@ class Game
     return errors_allowed == 0
   end
 
-  def normalize_letter(letter)
-    return 'Е' if letter == 'Ё'
-    return 'И' if letter == 'Й'
-    letter
-  end
-
-  def normalized_letters
-    @letters.map { |letter| normalize_letter(letter) }
-  end
-
   def over?
     return won? || lost?
   end
@@ -61,5 +51,17 @@ class Game
 
   def won?
     return (normalized_letters - @guess_letters).empty?
+  end
+
+  private
+
+  def normalize_letter(letter)
+    return 'Е' if letter == 'Ё'
+    return 'И' if letter == 'Й'
+    letter
+  end
+
+  def normalized_letters
+    @letters.map { |letter| normalize_letter(letter) }
   end
 end
